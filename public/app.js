@@ -6,6 +6,8 @@ const initialize = function(){
 
 const map = new MapWrapper(container, center, zoom);
 
+  map.addMarker(center);
+  
 };
 
 window.addEventListener('DOMContentLoaded', initialize);
