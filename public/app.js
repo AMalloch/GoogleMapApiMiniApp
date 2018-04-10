@@ -10,6 +10,8 @@ const initialize = function(){
 
   map.addMarker(center, contentString);
 
+  const chicagoButton = document.getElementById('button-chicago');
+  chicagoButton.addEventListener('click', map.setCenterChicago.bind(map));
 };
 
 window.addEventListener('DOMContentLoaded', initialize);

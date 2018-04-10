@@ -1,4 +1,4 @@
-const MapWrapper = function(container, coords, zoom, contentString){
+const MapWrapper = function(container, coords, zoom){
   this.googleMap = new google.maps.Map(container, {
     center: coords,
     zoom: zoom
@@ -21,4 +21,8 @@ MapWrapper.prototype.addMarker = function (coords, contentString) {
     infowindow.open(this.googleMap, marker);
   });
 
+};
+
+MapWrapper.prototype.setCenterChicago = function () {
+  this.googleMap.setCenter({lat:41.86497082505316, lng:-87.6242095});
 };
