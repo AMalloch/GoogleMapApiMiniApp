@@ -12,6 +12,9 @@ const initialize = function(){
 
   const chicagoButton = document.getElementById('button-chicago');
   chicagoButton.addEventListener('click', map.setCenterChicago.bind(map));
+
+  const spyButton = document.getElementById('button-spy');
+  spyButton.addEventListener('click', map.geoLocator.bind(map));
 };
 
 window.addEventListener('DOMContentLoaded', initialize);
