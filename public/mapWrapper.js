@@ -30,11 +30,13 @@ MapWrapper.prototype.setCenterChicago = function () {
 MapWrapper.prototype.geoLocator = function () {
   var output = document.getElementById("spy-map");
 
+      // geolocation API
   if (!navigator.geolocation){
     output.innerHTML = "<p>Your browser sucks</p>";
     return;
   }
 
+   // getCurrentPosition() will accept a success callback and or an optional error callback
   function success(position) {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
@@ -53,5 +55,9 @@ MapWrapper.prototype.geoLocator = function () {
 
   output.innerHTML = "<p>Locating…</p>";
 
+  // Initiates a request to detect the user's
+  // position, and queries the positioning hardware to get
+  // information. When the position is determined, the defined callback
+  // function is executed.
   navigator.geolocation.getCurrentPosition(success, error);
 };
