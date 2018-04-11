@@ -6,7 +6,7 @@ const initialize = function(){
 
   const map = new MapWrapper(container, center, zoom);
 
-  var contentString = '<p>Info</>';
+  var contentString = '<p>Info</p>';
 
   map.addMarker(center, contentString);
 
